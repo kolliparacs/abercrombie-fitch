@@ -1,0 +1,19 @@
+#add-task{
+	margin-top :15px;
+}
+label{
+	margin-top:10px
+}
+#task-table{
+	border: 1px solid;
+	max-height:700px;
+}
+.table-container{
+	
+}
+thead, tbody { display: block; }
+
+tbody {
+    height: 300px;
+	overflow-y: auto;
+}

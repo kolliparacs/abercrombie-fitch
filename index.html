@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Test Application</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div class="col-md-8">
+			<h2 >Existing tasks</h2>
+			<div class="table-container">
+				<table id="task-table" class="table table-striped">
+					<thead>
+					  <tr>
+						<th>Task</th>
+						<th>Date</th>
+						<th>Assigned</th>
+					  </tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h2>Add Task</h2>
+			<div class="col-md-9">
+				<label>Name</label>
+				<input type="text" class="form-control" id="task-name"></input>
+				<label>Date</label>
+				<input type="date" class="form-control" id="due-date"></input>
+				<label> Assigned To</label>
+				<input type="text" class="form-control" id="assigned-user"></input>
+				<button id="add-task" class="btn btn-primary">Add Task</button>
+			</div>
+		</div>
+	</body>
+</html>
