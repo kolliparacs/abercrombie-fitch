@@ -11,13 +11,16 @@ $(function() {
 	];
 	var table = $('#task-table tbody')[0];
 	var columnCount = Object.keys(taskList[0]).length;
+	var addNewRow = function(task){
+		row = table.insertRow(-1);
+        for (key in task) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = task[key];
+        }
+	}
 	//Insert rows for each task in the list and append to existing table
 	for (var i = 0; i < taskList.length; i++) {
-        row = table.insertRow(-1);
-        for (key in taskList[i]) {
-            var cell = row.insertCell(-1);
-            cell.innerHTML = taskList[i][key];
-        }
+		addNewRow(taskList[i]);
     }
 	/*$.ajax({
 	  url: 'data.json',
@@ -27,14 +30,8 @@ $(function() {
 	});*/
 	//Insert the form data as a new row into the table
 	$('#add-task').off('click').on('click', function(){
-		var table = $('#task-table tbody')[0];
-		row = table.insertRow(-1);
-		var cell = row.insertCell(-1);
-        cell.innerHTML = $('#task-name').val();
-		var cell = row.insertCell(-1);
-        cell.innerHTML = $('#due-date').val();
-		var cell = row.insertCell(-1);
-        cell.innerHTML = $('#assigned-user').val();
+		var newTask = {'name': $('#task-name').val(),'date':$('#due-date').val(),'assigned':$('#assigned-user').val()};
+		taskList.push(newTask);
+		addNewRow(newTask);
 	});
-	
 });
