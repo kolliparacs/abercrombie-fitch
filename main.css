@@ -9,11 +9,6 @@ label{
 	max-height:700px;
 }
 .table-container{
-	
-}
-thead, tbody { display: block; }
-
-tbody {
-    height: 300px;
+	height: 300px;
 	overflow-y: auto;
 }
